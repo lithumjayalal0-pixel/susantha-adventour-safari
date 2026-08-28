@@ -4,624 +4,1264 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Susanthe Adventure Jeep Safari | Habarana</title>
+<title>Susantha Adventour Jeep Safari | Habarana</title>
 
 <style>
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
 html{
-    scroll-behavior:smooth;
+  scroll-behavior:smooth;
 }
 
 body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:#07140d;
-    color:white;
+  font-family:Arial, Helvetica, sans-serif;
+  background:#f5f0e6;
+  color:#17251b;
+  line-height:1.6;
 }
 
-/* HEADER */
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+img{
+  width:100%;
+  display:block;
+  object-fit:cover;
+}
+
+/* ================= HEADER ================= */
+
 header{
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:110px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding:0 7%;
-    z-index:10;
-    background:rgba(5,10,7,0.88);
-    border-bottom:1px solid rgba(255,255,255,0.12);
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:#101810;
+  border-bottom:1px solid #39452f;
+}
+
+.navbar{
+  max-width:1220px;
+  margin:auto;
+  min-height:110px;
+  padding:15px 25px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:30px;
 }
 
 .logo-area{
-    display:flex;
-    align-items:center;
-    gap:15px;
+  display:flex;
+  align-items:center;
+  gap:15px;
 }
 
-.logo-area img{
-    width:58px;
-    height:58px;
-    border-radius:50%;
-    object-fit:cover;
+.logo{
+  width:58px;
+  height:58px;
+  border-radius:50%;
+  object-fit:cover;
 }
 
 .logo-text h2{
-    font-size:20px;
-    letter-spacing:1px;
+  color:white;
+  font-size:20px;
+  letter-spacing:1px;
 }
 
 .logo-text p{
-    font-size:15px;
-    font-weight:bold;
-    margin-top:7px;
-    letter-spacing:1px;
+  color:white;
+  font-weight:bold;
+  font-size:14px;
+  letter-spacing:1px;
+  margin-top:3px;
 }
 
-nav{
-    display:flex;
-    gap:28px;
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:28px;
 }
 
-nav a{
-    color:white;
-    text-decoration:none;
-    font-size:15px;
-    font-weight:bold;
+.nav-links a{
+  color:white;
+  font-weight:bold;
+  font-size:15px;
+  transition:.3s;
 }
 
-nav a:hover{
-    color:#f3b632;
+.nav-links a:hover{
+  color:#e1ad3e;
 }
 
-/* HERO */
+/* ================= HERO ================= */
+
 .hero{
-    min-height:100vh;
-    background:
-        linear-gradient(rgba(0,0,0,0.58),rgba(0,0,0,0.58)),
-        url("wildlife-1.jpg") center/cover no-repeat;
-
-    display:flex;
-    align-items:center;
-    padding:150px 7% 80px;
+  min-height:720px;
+  background:
+    linear-gradient(rgba(10,18,12,.60),rgba(10,18,12,.68)),
+    url("wildlife-1.jpg") center/cover no-repeat;
+  display:flex;
+  align-items:center;
 }
 
 .hero-content{
-    max-width:850px;
+  max-width:1220px;
+  width:100%;
+  margin:auto;
+  padding:80px 25px;
 }
 
-.location{
-    display:inline-block;
-    background:#e9ad32;
-    color:#111;
-    padding:11px 17px;
-    border-radius:25px;
-    font-weight:bold;
-    font-size:14px;
-    margin-bottom:25px;
+.badge{
+  display:inline-block;
+  background:#e1ad3e;
+  color:#111;
+  padding:9px 18px;
+  border-radius:30px;
+  font-weight:bold;
+  margin-bottom:25px;
 }
 
 .hero h1{
-    font-size:70px;
-    line-height:1.05;
-    margin-bottom:28px;
+  color:white;
+  font-size:72px;
+  line-height:1.05;
+  max-width:850px;
+  margin-bottom:28px;
 }
 
 .hero p{
-    font-size:23px;
-    line-height:1.6;
-    max-width:850px;
-    margin-bottom:32px;
+  color:white;
+  font-size:21px;
+  max-width:780px;
+  margin-bottom:32px;
 }
 
 .buttons{
-    display:flex;
-    gap:14px;
-    flex-wrap:wrap;
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
 }
 
 .btn{
-    display:inline-block;
-    padding:18px 27px;
-    border-radius:9px;
-    text-decoration:none;
-    font-weight:bold;
-    font-size:16px;
+  display:inline-block;
+  padding:16px 26px;
+  border-radius:9px;
+  font-weight:bold;
+  font-size:16px;
+  transition:.3s;
 }
 
-.primary{
-    background:#e9ad32;
-    color:#111;
+.btn-gold{
+  background:#e1ad3e;
+  color:#111;
 }
 
-.secondary{
-    color:white;
-    border:1px solid white;
+.btn-gold:hover{
+  transform:translateY(-2px);
+  background:#f0bf50;
 }
 
-.primary:hover{
-    background:#ffc451;
+.btn-outline{
+  color:white;
+  border:1px solid white;
 }
 
-.secondary:hover{
-    background:white;
-    color:#111;
+.btn-outline:hover{
+  background:white;
+  color:#111;
 }
 
-/* ANIMALS */
-.animals{
-    margin-top:30px;
-    display:flex;
-    gap:22px;
-    flex-wrap:wrap;
-    font-size:16px;
+.animal-list{
+  margin-top:25px;
+  color:white;
+  font-weight:bold;
+  display:flex;
+  flex-wrap:wrap;
+  gap:18px;
 }
 
-.animals span{
-    display:flex;
-    align-items:center;
-    gap:7px;
-}
+/* ================= GENERAL ================= */
 
-/* SECTIONS */
 section{
-    padding:90px 7%;
+  padding:90px 25px;
+}
+
+.container{
+  max-width:1220px;
+  margin:auto;
+}
+
+.section-label{
+  color:#71851c;
+  font-weight:bold;
+  letter-spacing:3px;
+  font-size:14px;
+  margin-bottom:12px;
 }
 
 .section-title{
-    text-align:center;
-    font-size:42px;
-    margin-bottom:20px;
+  font-size:52px;
+  line-height:1.1;
+  margin-bottom:20px;
+  color:#17251b;
 }
 
 .section-text{
-    max-width:850px;
-    margin:auto;
-    text-align:center;
-    color:#d5d5d5;
-    line-height:1.8;
-    font-size:18px;
+  color:#52605a;
+  font-size:18px;
+  max-width:850px;
 }
 
-/* ABOUT */
+/* ================= ABOUT ================= */
+
 .about{
-    background:#0b1c12;
+  background:#f5f0e6;
 }
 
-.cards{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:25px;
-    margin-top:45px;
+.about-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:55px;
+  align-items:center;
 }
 
-.card{
-    background:#13271a;
-    padding:35px 25px;
-    border-radius:16px;
-    text-align:center;
-    border:1px solid rgba(255,255,255,0.08);
+.about-images{
+  display:grid;
+  grid-template-columns:1fr 1.6fr;
+  grid-template-rows:150px 180px 150px;
+  gap:3px;
+  background:#e1ad3e;
+  padding:12px;
+  border-radius:25px;
 }
 
-.card .icon{
-    font-size:42px;
-    margin-bottom:18px;
+.about-images img{
+  height:100%;
+  border-radius:8px;
 }
 
-.card h3{
-    margin-bottom:12px;
-    font-size:22px;
+.about-images .big{
+  grid-column:2;
+  grid-row:1 / 3;
 }
 
-.card p{
-    color:#cfcfcf;
-    line-height:1.6;
+.about-images .small1{
+  grid-column:1;
+  grid-row:1;
 }
 
-/* SAFARIS */
+.about-images .small2{
+  grid-column:1;
+  grid-row:2;
+}
+
+.about-images .bottom1{
+  grid-column:1;
+  grid-row:3;
+}
+
+.about-images .bottom2{
+  grid-column:2;
+  grid-row:3;
+}
+
+.stats{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+  margin-top:30px;
+}
+
+.stat{
+  background:white;
+  padding:25px 18px;
+  border-radius:15px;
+}
+
+.stat strong{
+  display:block;
+  font-size:30px;
+  margin-bottom:5px;
+  color:#17251b;
+}
+
+/* ================= SAFARIS ================= */
+
 .safaris{
-    background:#07140d;
+  background:#101810;
+}
+
+.safaris .section-title{
+  color:white;
+}
+
+.safaris .section-text{
+  color:#dce4dc;
 }
 
 .safari-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:25px;
-    margin-top:45px;
+  margin-top:40px;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
 }
 
-.safari{
-    background:#102318;
-    border-radius:16px;
-    overflow:hidden;
+.safari-card{
+  background:#fff;
+  border-radius:20px;
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
 }
 
-.safari img{
-    width:100%;
-    height:230px;
-    object-fit:cover;
+.safari-card img{
+  height:205px;
 }
 
-.safari-content{
-    padding:25px;
+.safari-body{
+  padding:25px 22px 22px;
+  flex:1;
 }
 
-.safari h3{
-    font-size:23px;
-    margin-bottom:12px;
+.safari-body h3{
+  color:#17251b;
+  font-size:23px;
+  margin-bottom:10px;
 }
 
-.safari p{
-    color:#ccc;
-    line-height:1.6;
+.location{
+  color:#53675d;
+  margin-bottom:14px;
 }
 
-/* WILDLIFE */
+.tag{
+  display:inline-block;
+  background:#e8edd8;
+  color:#35451f;
+  border-radius:30px;
+  padding:8px 12px;
+  font-weight:bold;
+  font-size:13px;
+  margin-bottom:20px;
+}
+
+.safari-body p{
+  color:#56615b;
+  margin-bottom:22px;
+}
+
+.card-btn{
+  display:inline-block;
+  background:#e1ad3e;
+  color:#111;
+  padding:12px 20px;
+  border-radius:8px;
+  font-weight:bold;
+}
+
+/* ================= WILDLIFE ================= */
+
 .wildlife{
-    background:#0b1c12;
+  background:#f5f0e6;
 }
 
 .wildlife-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:18px;
-    margin-top:45px;
+  margin-top:40px;
+  display:grid;
+  grid-template-columns:1.3fr .85fr .85fr;
+  grid-template-rows:250px 250px;
+  gap:15px;
 }
 
-.wildlife-grid img{
-    width:100%;
-    height:260px;
-    object-fit:cover;
-    border-radius:14px;
-    transition:0.3s;
+.wildlife-item{
+  overflow:hidden;
+  border-radius:18px;
 }
 
-.wildlife-grid img:hover{
-    transform:scale(1.03);
+.wildlife-item img{
+  height:100%;
+  transition:.4s;
 }
 
-/* BOOK */
-.book{
-    text-align:center;
-    background:
-        linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
-        url("wildlife-2.jpg") center/cover;
+.wildlife-item:hover img{
+  transform:scale(1.05);
 }
 
-.book h2{
-    font-size:45px;
-    margin-bottom:20px;
+.wildlife-big{
+  grid-row:1 / 3;
 }
 
-.book p{
-    font-size:19px;
-    margin-bottom:30px;
-    color:#ddd;
+/* ================= GALLERY ================= */
+
+.gallery{
+  background:#101810;
 }
 
-/* FOOTER */
+.gallery .section-title{
+  color:white;
+}
+
+.gallery .section-text{
+  color:#dce4dc;
+}
+
+.gallery-grid{
+  margin-top:40px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+}
+
+.gallery-grid img{
+  height:260px;
+  border-radius:16px;
+  transition:.4s;
+}
+
+.gallery-grid img:hover{
+  transform:scale(1.02);
+}
+
+/* ================= BOOKING ================= */
+
+.booking{
+  background:#f5f0e6;
+}
+
+.booking-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  align-items:start;
+}
+
+.contact-box{
+  background:#18331f;
+  color:white;
+  padding:45px;
+  border-radius:25px;
+}
+
+.contact-box h2{
+  font-size:38px;
+  margin-bottom:25px;
+}
+
+.contact-box p{
+  color:#eef3ed;
+  margin-bottom:20px;
+}
+
+.contact-line{
+  border-top:1px solid rgba(255,255,255,.18);
+  padding:18px 0;
+}
+
+.contact-line strong{
+  display:block;
+  color:white;
+  margin-bottom:3px;
+}
+
+.form-box{
+  background:white;
+  padding:35px;
+  border-radius:25px;
+  box-shadow:0 15px 40px rgba(0,0,0,.08);
+}
+
+.form-box h2{
+  font-size:30px;
+  margin-bottom:25px;
+  color:#17251b;
+}
+
+.form-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+}
+
+input,
+select,
+textarea{
+  width:100%;
+  border:1px solid #d9dfd6;
+  padding:16px;
+  border-radius:10px;
+  font-size:16px;
+  font-family:inherit;
+  background:white;
+  color:#17251b;
+}
+
+textarea{
+  min-height:120px;
+  resize:vertical;
+  margin-top:14px;
+}
+
+.submit{
+  width:100%;
+  border:0;
+  cursor:pointer;
+  margin-top:14px;
+  background:#e1ad3e;
+  color:#111;
+  padding:17px;
+  border-radius:9px;
+  font-size:16px;
+  font-weight:bold;
+}
+
+/* ================= MAP ================= */
+
+.map-box{
+  margin-top:35px;
+  border-radius:20px;
+  overflow:hidden;
+  height:350px;
+}
+
+.map-box iframe{
+  width:100%;
+  height:100%;
+  border:0;
+}
+
+/* ================= FOOTER ================= */
+
 footer{
-    background:#050b07;
-    padding:35px 7%;
-    text-align:center;
-    color:#aaa;
+  background:#0c120d;
+  color:white;
+  padding:45px 25px;
+  text-align:center;
 }
 
-footer strong{
-    color:white;
+footer h3{
+  font-size:24px;
+  margin-bottom:8px;
 }
 
-/* WHATSAPP */
+footer p{
+  color:#bfc9c1;
+}
+
+/* ================= WHATSAPP ================= */
+
 .whatsapp{
-    position:fixed;
-    right:25px;
-    bottom:22px;
-    background:#20d66b;
-    color:white;
-    padding:18px 25px;
-    border-radius:35px;
-    text-decoration:none;
-    font-weight:bold;
-    font-size:17px;
-    z-index:20;
-    box-shadow:0 8px 25px rgba(0,0,0,0.3);
+  position:fixed;
+  right:22px;
+  bottom:22px;
+  z-index:999;
+  background:#25d366;
+  color:white;
+  padding:17px 25px;
+  border-radius:40px;
+  font-weight:bold;
+  box-shadow:0 8px 25px rgba(0,0,0,.25);
 }
 
-/* MOBILE */
-@media(max-width:900px){
+/* ================= MOBILE ================= */
 
-    header{
-        height:auto;
-        padding:15px 5%;
-        flex-direction:column;
-        gap:15px;
-    }
+@media(max-width:1000px){
 
-    nav{
-        gap:14px;
-        flex-wrap:wrap;
-        justify-content:center;
-    }
+  .navbar{
+    flex-direction:column;
+    padding:18px;
+  }
 
-    .hero{
-        padding:180px 5% 80px;
-    }
+  .nav-links{
+    gap:15px;
+    flex-wrap:wrap;
+    justify-content:center;
+  }
 
-    .hero h1{
-        font-size:45px;
-    }
+  .hero h1{
+    font-size:52px;
+  }
 
-    .hero p{
-        font-size:18px;
-    }
+  .safari-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
 
-    .cards,
-    .safari-grid,
-    .wildlife-grid{
-        grid-template-columns:1fr;
-    }
+  .about-grid,
+  .booking-grid{
+    grid-template-columns:1fr;
+  }
 
-    .book h2{
-        font-size:34px;
-    }
+  .wildlife-grid{
+    grid-template-columns:1fr 1fr;
+    grid-template-rows:260px 260px 260px;
+  }
+
+  .wildlife-big{
+    grid-row:auto;
+    grid-column:1 / 3;
+  }
+}
+
+@media(max-width:650px){
+
+  section{
+    padding:60px 18px;
+  }
+
+  .logo-text h2{
+    font-size:17px;
+  }
+
+  .logo-text p{
+    font-size:11px;
+  }
+
+  .nav-links{
+    gap:10px;
+  }
+
+  .nav-links a{
+    font-size:12px;
+  }
+
+  .hero{
+    min-height:650px;
+  }
+
+  .hero-content{
+    padding:60px 18px;
+  }
+
+  .hero h1{
+    font-size:42px;
+  }
+
+  .hero p{
+    font-size:17px;
+  }
+
+  .section-title{
+    font-size:38px;
+  }
+
+  .about-images{
+    grid-template-columns:1fr 1fr;
+    grid-template-rows:130px 130px 130px;
+  }
+
+  .about-images .big{
+    grid-column:2;
+    grid-row:1 / 3;
+  }
+
+  .stats{
+    grid-template-columns:1fr;
+  }
+
+  .safari-grid{
+    grid-template-columns:1fr;
+  }
+
+  .gallery-grid{
+    grid-template-columns:1fr;
+  }
+
+  .wildlife-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    grid-template-rows:repeat(5,220px);
+  }
+
+  .wildlife-big{
+    grid-column:auto;
+    grid-row:auto;
+  }
+
+  .form-grid{
+    grid-template-columns:1fr;
+  }
+
+  .contact-box,
+  .form-box{
+    padding:25px;
+  }
+
+  .whatsapp{
+    right:12px;
+    bottom:12px;
+    padding:14px 18px;
+  }
 }
 </style>
 </head>
 
 <body>
 
+<!-- ================= HEADER ================= -->
+
 <header>
+<div class="navbar">
 
-<div class="logo-area">
-<img src="logo.png" alt="Susanthe Adventure Safari">
+  <a href="#home" class="logo-area">
+    <img src="logo.png" class="logo" alt="Susantha Adventour Logo">
 
-<div class="logo-text">
-<h2>SUSANTHA ADVENTOUR</h2>
-<p>JEEP SAFARI • HABARANA</p>
+    <div class="logo-text">
+      <h2>SUSANTHA ADVENTOUR</h2>
+      <p>JEEP SAFARI • HABARANA</p>
+    </div>
+  </a>
+
+  <nav class="nav-links">
+    <a href="#home">HOME</a>
+    <a href="#about">ABOUT</a>
+    <a href="#safaris">SAFARIS</a>
+    <a href="#wildlife">WILDLIFE</a>
+    <a href="#gallery">GALLERY</a>
+    <a href="#booking">BOOK NOW</a>
+  </nav>
+
 </div>
-</div>
-
-<nav>
-<a href="#home">HOME</a>
-<a href="#about">ABOUT</a>
-<a href="#safaris">SAFARIS</a>
-<a href="#wildlife">WILDLIFE</a>
-<a href="#gallery">GALLERY</a>
-<a href="#book">BOOK NOW</a>
-</nav>
-
 </header>
 
 
-<!-- HERO -->
+<!-- ================= HOME ================= -->
 
 <section class="hero" id="home">
 
 <div class="hero-content">
 
-<div class="location">
-HABARANA • SRI LANKA
-</div>
+  <span class="badge">HABARANA • SRI LANKA</span>
 
-<h1>
-Discover the Wild<br>
-Side of Sri Lanka
-</h1>
+  <h1>Discover the Wild Side of Sri Lanka</h1>
 
-<p>
-Experience unforgettable jeep safaris and discover elephants,
-leopards, deer, sloth bears and spectacular birdlife with
-Susanthe Adventour Jeep Safari.
-</p>
+  <p>
+    Experience unforgettable jeep safaris and discover elephants,
+    leopards, deer, sloth bears and spectacular birdlife with
+    Susantha Adventour Jeep Safari.
+  </p>
 
-<div class="buttons">
+  <div class="buttons">
+    <a href="#booking" class="btn btn-gold">BOOK YOUR SAFARI</a>
 
-<a class="btn primary" href="#book">
-BOOK YOUR SAFARI
-</a>
+    <a href="https://wa.me/94760668253"
+       target="_blank"
+       class="btn btn-outline">
+       WHATSAPP US
+    </a>
+  </div>
 
-<a class="btn secondary"
-href="https://wa.me/94707763283"
-target="_blank">
-WHATSAPP US
-</a>
-
-</div>
-
-<div class="animals">
-
-<span>🐘 Elephants</span>
-<span>•</span>
-<span>🦁 Leopards</span>
-<span>•</span>
-<span>🦌 Deer</span>
-<span>•</span>
-<span>🐻 Sloth Bears</span>
-<span>•</span>
-<span>🦩 Birdlife</span>
-
-</div>
+  <div class="animal-list">
+    <span>🐘 Elephants</span>
+    <span>🐆 Leopards</span>
+    <span>🦌 Deer</span>
+    <span>🐻 Sloth Bears</span>
+    <span>🦩 Birdlife</span>
+  </div>
 
 </div>
 
 </section>
 
 
-<!-- ABOUT -->
+<!-- ================= ABOUT ================= -->
 
 <section class="about" id="about">
 
-<h2 class="section-title">
-Your Safari Adventure Starts Here
-</h2>
+<div class="container">
 
-<p class="section-text">
-Explore the incredible wildlife and natural beauty around
-Habarana with an experienced local safari team.
-We provide memorable jeep safari experiences for families,
-couples and wildlife lovers.
-</p>
+<div class="about-grid">
 
-<div class="cards">
+  <div class="about-images">
 
-<div class="card">
-<div class="icon">🚙</div>
-<h3>Jeep Safari</h3>
-<p>
-Comfortable safari jeep experiences through
-Sri Lanka's beautiful wildlife areas.
-</p>
+    <img src="wildlife-2.jpg" class="small1" alt="Leopard">
+
+    <img src="wildlife-1.jpg" class="big" alt="Elephants">
+
+    <img src="wildlife-3.jpg" class="small2" alt="Safari">
+
+    <img src="wildlife-4.jpg" class="bottom1" alt="Birdlife">
+
+    <img src="wildlife-5.jpg" class="bottom2" alt="Deer">
+
+  </div>
+
+
+  <div>
+
+    <div class="section-label">ABOUT US</div>
+
+    <h2 class="section-title">
+      Your Habarana Safari Adventure Starts Here
+    </h2>
+
+    <p class="section-text">
+      Susantha Adventour Jeep Safari offers memorable wildlife
+      experiences for both international visitors and local travelers.
+      Explore Sri Lanka's famous elephant country in comfort with an
+      experienced safari journey from Habarana.
+    </p>
+
+    <div class="stats">
+
+      <div class="stat">
+        <strong>6</strong>
+        Maximum guests per jeep
+      </div>
+
+      <div class="stat">
+        <strong>4</strong>
+        Safari experiences
+      </div>
+
+      <div class="stat">
+        <strong>3</strong>
+        Wildlife destinations
+      </div>
+
+    </div>
+
+  </div>
+
 </div>
 
-<div class="card">
-<div class="icon">🐘</div>
-<h3>Wildlife</h3>
-<p>
-Get close to elephants and discover the amazing
-wildlife of Sri Lanka.
-</p>
 </div>
-
-<div class="card">
-<div class="icon">📸</div>
-<h3>Memories</h3>
-<p>
-Capture unforgettable moments surrounded by
-nature and wildlife.
-</p>
-</div>
-
-</div>
-
 </section>
 
 
-<!-- SAFARIS -->
+<!-- ================= SAFARIS ================= -->
 
 <section class="safaris" id="safaris">
 
-<h2 class="section-title">
-Our Safari Experiences
-</h2>
+<div class="container">
 
-<p class="section-text">
-Choose an exciting safari adventure and experience
-the wild side of Habarana.
-</p>
+  <div class="section-label">SAFARI EXPERIENCES</div>
 
-<div class="safari-grid">
+  <h2 class="section-title">Choose Your Safari Adventure</h2>
 
-<div class="safari">
-<img src="wildlife-1.jpg" alt="Wildlife Safari">
-<div class="safari-content">
-<h3>Wildlife Safari</h3>
-<p>
-Discover elephants, birds and other amazing wildlife
-in their natural environment.
-</p>
-</div>
-</div>
+  <p class="section-text">
+    Choose the safari experience that suits your travel plans and
+    discover extraordinary wildlife in Sri Lanka.
+  </p>
 
-<div class="safari">
-<img src="wildlife-2.jpg" alt="Elephant Safari">
-<div class="safari-content">
-<h3>Elephant Safari</h3>
-<p>
-Experience the beauty of Sri Lanka's magnificent
-elephants.
-</p>
-</div>
-</div>
 
-<div class="safari">
-<img src="wildlife-3.jpg" alt="Nature Safari">
-<div class="safari-content">
-<h3>Nature Adventure</h3>
-<p>
-Enjoy a peaceful adventure through forests,
-lakes and beautiful landscapes.
-</p>
-</div>
-</div>
+  <div class="safari-grid">
+
+    <div class="safari-card">
+
+      <img src="wildlife-1.jpg" alt="Morning Safari">
+
+      <div class="safari-body">
+
+        <h3>Morning Safari</h3>
+
+        <div class="location">
+          Minneriya • Kaudulla • Eco Park
+        </div>
+
+        <span class="tag">
+          Best for fresh morning wildlife viewing
+        </span>
+
+        <p>
+          Start the day surrounded by nature and discover elephants,
+          birds and other wildlife.
+        </p>
+
+        <a href="#booking" class="card-btn">Book Now</a>
+
+      </div>
+
+    </div>
+
+
+    <div class="safari-card">
+
+      <img src="wildlife-5.jpg" alt="Evening Safari">
+
+      <div class="safari-body">
+
+        <h3>Evening Safari</h3>
+
+        <div class="location">
+          Minneriya • Kaudulla • Eco Park
+        </div>
+
+        <span class="tag">
+          Golden-hour safari experience
+        </span>
+
+        <p>
+          Enjoy the changing light and beautiful wildlife scenery
+          during the evening.
+        </p>
+
+        <a href="#booking" class="card-btn">Book Now</a>
+
+      </div>
+
+    </div>
+
+
+    <div class="safari-card">
+
+      <img src="wildlife-3.jpg" alt="Full Day Safari">
+
+      <div class="safari-body">
+
+        <h3>Full Day Safari</h3>
+
+        <div class="location">
+          Minneriya • Kaudulla • Eco Park
+        </div>
+
+        <span class="tag">
+          A complete day in the wild
+        </span>
+
+        <p>
+          Spend more time exploring and maximize your opportunities
+          to experience wildlife.
+        </p>
+
+        <a href="#booking" class="card-btn">Book Now</a>
+
+      </div>
+
+    </div>
+
+
+    <div class="safari-card">
+
+      <img src="wildlife-2.jpg" alt="Night Safari">
+
+      <div class="safari-body">
+
+        <h3>Night Safari</h3>
+
+        <div class="location">
+          Minneriya • Kaudulla • Eco Park
+        </div>
+
+        <span class="tag">
+          A different side of nature
+        </span>
+
+        <p>
+          Experience the atmosphere of the wild after dark with
+          a guided safari journey.
+        </p>
+
+        <a href="#booking" class="card-btn">Book Now</a>
+
+      </div>
+
+    </div>
+
+  </div>
 
 </div>
-
 </section>
 
 
-<!-- WILDLIFE -->
+<!-- ================= WILDLIFE ================= -->
 
 <section class="wildlife" id="wildlife">
 
-<h2 class="section-title">
-Sri Lanka Wildlife
-</h2>
+<div class="container">
 
-<p class="section-text">
-A safari is more than a journey. It is a chance to see
-Sri Lanka's incredible wildlife in the wild.
-</p>
+  <div class="section-label">WILDLIFE</div>
 
-<div class="wildlife-grid">
+  <h2 class="section-title">Wildlife of Sri Lanka</h2>
 
-<img src="wildlife-1.jpg" alt="Wildlife">
-<img src="wildlife-2.jpg" alt="Wildlife">
-<img src="wildlife-3.jpg" alt="Wildlife">
-<img src="wildlife-4.jpg" alt="Wildlife">
-<img src="wildlife-5.jpg" alt="Wildlife">
-<img src="wildlife-6.jpg" alt="Wildlife">
+  <p class="section-text">
+    Every safari is different. Our journeys offer opportunities to
+    observe Sri Lankan elephants, spotted deer, leopards, sloth bears
+    and diverse birdlife in their natural surroundings.
+  </p>
+
+
+  <div class="wildlife-grid">
+
+    <div class="wildlife-item wildlife-big">
+      <img src="wildlife-1.jpg" alt="Sri Lankan Elephants">
+    </div>
+
+    <div class="wildlife-item">
+      <img src="wildlife-5.jpg" alt="Spotted Deer">
+    </div>
+
+    <div class="wildlife-item">
+      <img src="wildlife-2.jpg" alt="Sri Lankan Leopard">
+    </div>
+
+    <div class="wildlife-item">
+      <img src="wildlife-6.jpg" alt="Sloth Bear">
+    </div>
+
+    <div class="wildlife-item">
+      <img src="wildlife-3.jpg" alt="Elephants">
+    </div>
+
+  </div>
+
+</div>
+</section>
+
+
+<!-- ================= GALLERY ================= -->
+
+<section class="gallery" id="gallery">
+
+<div class="container">
+
+  <div class="section-label">GALLERY</div>
+
+  <h2 class="section-title">Safari Moments</h2>
+
+  <p class="section-text">
+    A glimpse of the wildlife and unforgettable moments you can
+    experience around Habarana.
+  </p>
+
+
+  <div class="gallery-grid">
+
+    <img src="wildlife-1.jpg" alt="Elephants">
+
+    <img src="wildlife-2.jpg" alt="Leopard">
+
+    <img src="wildlife-3.jpg" alt="Safari">
+
+    <img src="wildlife-4.jpg" alt="Birdlife">
+
+    <img src="wildlife-5.jpg" alt="Deer">
+
+    <img src="wildlife-6.jpg" alt="Sloth Bear">
+
+  </div>
+
+</div>
+</section>
+
+
+<!-- ================= BOOKING ================= -->
+
+<section class="booking" id="booking">
+
+<div class="container">
+
+<div class="booking-grid">
+
+
+  <div class="contact-box">
+
+    <div class="section-label">BOOK WITH US</div>
+
+    <h2>Ready for Your Safari?</h2>
+
+    <p>
+      Contact Susantha Adventour Jeep Safari directly to check
+      availability and plan your wildlife adventure.
+    </p>
+
+
+    <div class="contact-line">
+      <strong>WhatsApp</strong>
+      076 066 8253
+    </div>
+
+
+    <div class="contact-line">
+      <strong>Telephone</strong>
+      077 636 8253<br>
+      071 280 9519
+    </div>
+
+
+    <div class="contact-line">
+      <strong>Email</strong>
+      susanjeewa84@gmail.com
+    </div>
+
+
+    <div class="contact-line">
+      <strong>Location</strong>
+      Habarana–Anuradhapura Road,
+      Habarana, Sri Lanka
+    </div>
+
+  </div>
+
+
+  <div class="form-box">
+
+    <h2>Send a Booking Request</h2>
+
+    <form onsubmit="sendWhatsApp(); return false;">
+
+      <div class="form-grid">
+
+        <input
+          type="text"
+          id="name"
+          placeholder="Your Name"
+          required
+        >
+
+        <input
+          type="tel"
+          id="phone"
+          placeholder="Phone / WhatsApp Number"
+          required
+        >
+
+        <input
+          type="date"
+          id="date"
+          required
+        >
+
+        <select id="safari" required>
+          <option value="">Select Safari Type</option>
+          <option>Morning Safari</option>
+          <option>Evening Safari</option>
+          <option>Full Day Safari</option>
+          <option>Night Safari</option>
+        </select>
+
+        <select id="destination" required>
+          <option value="">Select Destination</option>
+          <option>Minneriya National Park</option>
+          <option>Kaudulla National Park</option>
+          <option>Hurulu Eco Park</option>
+        </select>
+
+        <select id="guests" required>
+          <option value="">Number of Guests</option>
+          <option>1 Guest</option>
+          <option>2 Guests</option>
+          <option>3 Guests</option>
+          <option>4 Guests</option>
+          <option>5 Guests</option>
+          <option>6 Guests</option>
+        </select>
+
+      </div>
+
+      <textarea
+        id="message"
+        placeholder="Special requests or message">
+      </textarea>
+
+      <button class="submit" type="submit">
+        SEND BOOKING REQUEST VIA WHATSAPP
+      </button>
+
+    </form>
+
+  </div>
 
 </div>
 
+
+<!-- MAP -->
+
+<div class="map-box">
+
+<iframe
+src="https://www.google.com/maps?q=Habarana,Sri%20Lanka&output=embed"
+loading="lazy">
+</iframe>
+
+</div>
+
+</div>
 </section>
 
 
-<!-- BOOK -->
+<!-- ================= FOOTER ================= -->
 
-<section class="book" id="book">
+<footer>
 
-<h2>
-Ready for Your Safari?
-</h2>
+<h3>SUSANTHA ADVENTOUR JEEP SAFARI</h3>
 
 <p>
-Contact us today and plan your unforgettable
-Habarana wildlife adventure.
-</p>
-
-<a class="btn primary"
-href="https://wa.me/94707763283"
-target="_blank">
-WHATSAPP BOOKING
-</a>
-
-</section>
-
-
-<footer id="gallery">
-
-<p>
-© 2026 <strong>Susanthe Adventour Jeep Safari</strong>
+Habarana, Sri Lanka • Wildlife • Adventure • Memories
 </p>
 
 <p style="margin-top:10px;">
-Habarana • Sri Lanka
+© 2026 Susantha Adventour Jeep Safari. All Rights Reserved.
 </p>
 
 </footer>
 
 
-<a class="whatsapp"
-href="https://wa.me/94707763283"
+<!-- ================= WHATSAPP BUTTON ================= -->
+
+<a
+class="whatsapp"
+href="https://wa.me/94760668253"
 target="_blank">
+
 💬 WhatsApp Booking
+
 </a>
 
+
+<script>
+
+function sendWhatsApp(){
+
+  const name =
+    document.getElementById("name").value;
+
+  const phone =
+    document.getElementById("phone").value;
+
+  const date =
+    document.getElementById("date").value;
+
+  const safari =
+    document.getElementById("safari").value;
+
+  const destination =
+    document.getElementById("destination").value;
+
+  const guests =
+    document.getElementById("guests").value;
+
+  const message =
+    document.getElementById("message").value;
+
+
+  const text =
+`Hello Susantha Adventour Jeep Safari!
+
+I would like to make a safari booking.
+
+Name: ${name}
+Phone / WhatsApp: ${phone}
+Date: ${date}
+Safari Type: ${safari}
+Destination: ${destination}
+Guests: ${guests}
+Message: ${message}`;
+
+
+  const url =
+    "https://wa.me/94760668253?text="
+    + encodeURIComponent(text);
+
+  window.open(url, "_blank");
+
+}
+
+</script>
+
 </body>
-</html>
