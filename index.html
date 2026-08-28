@@ -1,169 +1,627 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Susanthe Adventure Safari</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+<title>Susanthe Adventure Jeep Safari | Habarana</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#07140d;
+    color:white;
+}
+
+/* HEADER */
+header{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:110px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 7%;
+    z-index:10;
+    background:rgba(5,10,7,0.88);
+    border-bottom:1px solid rgba(255,255,255,0.12);
+}
+
+.logo-area{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.logo-area img{
+    width:58px;
+    height:58px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.logo-text h2{
+    font-size:20px;
+    letter-spacing:1px;
+}
+
+.logo-text p{
+    font-size:15px;
+    font-weight:bold;
+    margin-top:7px;
+    letter-spacing:1px;
+}
+
+nav{
+    display:flex;
+    gap:28px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-size:15px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#f3b632;
+}
+
+/* HERO */
+.hero{
+    min-height:100vh;
+    background:
+        linear-gradient(rgba(0,0,0,0.58),rgba(0,0,0,0.58)),
+        url("wildlife-1.jpg") center/cover no-repeat;
+
+    display:flex;
+    align-items:center;
+    padding:150px 7% 80px;
+}
+
+.hero-content{
+    max-width:850px;
+}
+
+.location{
+    display:inline-block;
+    background:#e9ad32;
+    color:#111;
+    padding:11px 17px;
+    border-radius:25px;
+    font-weight:bold;
+    font-size:14px;
+    margin-bottom:25px;
+}
+
+.hero h1{
+    font-size:70px;
+    line-height:1.05;
+    margin-bottom:28px;
+}
+
+.hero p{
+    font-size:23px;
+    line-height:1.6;
+    max-width:850px;
+    margin-bottom:32px;
+}
+
+.buttons{
+    display:flex;
+    gap:14px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-block;
+    padding:18px 27px;
+    border-radius:9px;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:16px;
+}
+
+.primary{
+    background:#e9ad32;
+    color:#111;
+}
+
+.secondary{
+    color:white;
+    border:1px solid white;
+}
+
+.primary:hover{
+    background:#ffc451;
+}
+
+.secondary:hover{
+    background:white;
+    color:#111;
+}
+
+/* ANIMALS */
+.animals{
+    margin-top:30px;
+    display:flex;
+    gap:22px;
+    flex-wrap:wrap;
+    font-size:16px;
+}
+
+.animals span{
+    display:flex;
+    align-items:center;
+    gap:7px;
+}
+
+/* SECTIONS */
+section{
+    padding:90px 7%;
+}
+
+.section-title{
+    text-align:center;
+    font-size:42px;
+    margin-bottom:20px;
+}
+
+.section-text{
+    max-width:850px;
+    margin:auto;
+    text-align:center;
+    color:#d5d5d5;
+    line-height:1.8;
+    font-size:18px;
+}
+
+/* ABOUT */
+.about{
+    background:#0b1c12;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+    margin-top:45px;
+}
+
+.card{
+    background:#13271a;
+    padding:35px 25px;
+    border-radius:16px;
+    text-align:center;
+    border:1px solid rgba(255,255,255,0.08);
+}
+
+.card .icon{
+    font-size:42px;
+    margin-bottom:18px;
+}
+
+.card h3{
+    margin-bottom:12px;
+    font-size:22px;
+}
+
+.card p{
+    color:#cfcfcf;
+    line-height:1.6;
+}
+
+/* SAFARIS */
+.safaris{
+    background:#07140d;
+}
+
+.safari-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+    margin-top:45px;
+}
+
+.safari{
+    background:#102318;
+    border-radius:16px;
+    overflow:hidden;
+}
+
+.safari img{
+    width:100%;
+    height:230px;
+    object-fit:cover;
+}
+
+.safari-content{
+    padding:25px;
+}
+
+.safari h3{
+    font-size:23px;
+    margin-bottom:12px;
+}
+
+.safari p{
+    color:#ccc;
+    line-height:1.6;
+}
+
+/* WILDLIFE */
+.wildlife{
+    background:#0b1c12;
+}
+
+.wildlife-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+    margin-top:45px;
+}
+
+.wildlife-grid img{
+    width:100%;
+    height:260px;
+    object-fit:cover;
+    border-radius:14px;
+    transition:0.3s;
+}
+
+.wildlife-grid img:hover{
+    transform:scale(1.03);
+}
+
+/* BOOK */
+.book{
+    text-align:center;
+    background:
+        linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
+        url("wildlife-2.jpg") center/cover;
+}
+
+.book h2{
+    font-size:45px;
+    margin-bottom:20px;
+}
+
+.book p{
+    font-size:19px;
+    margin-bottom:30px;
+    color:#ddd;
+}
+
+/* FOOTER */
+footer{
+    background:#050b07;
+    padding:35px 7%;
+    text-align:center;
+    color:#aaa;
+}
+
+footer strong{
+    color:white;
+}
+
+/* WHATSAPP */
+.whatsapp{
+    position:fixed;
+    right:25px;
+    bottom:22px;
+    background:#20d66b;
+    color:white;
+    padding:18px 25px;
+    border-radius:35px;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:17px;
+    z-index:20;
+    box-shadow:0 8px 25px rgba(0,0,0,0.3);
+}
+
+/* MOBILE */
+@media(max-width:900px){
+
+    header{
+        height:auto;
+        padding:15px 5%;
+        flex-direction:column;
+        gap:15px;
     }
 
-    body {
-      font-family: Arial, sans-serif;
-      background: #07140d;
-      color: white;
+    nav{
+        gap:14px;
+        flex-wrap:wrap;
+        justify-content:center;
     }
 
-    header {
-      min-height: 90vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 30px;
-      background:
-        linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.75)),
-        url("wildlife-1.jpg") center/cover;
+    .hero{
+        padding:180px 5% 80px;
     }
 
-    .hero {
-      max-width: 850px;
+    .hero h1{
+        font-size:45px;
     }
 
-    .logo {
-      width: 100px;
-      height: 100px;
-      object-fit: contain;
-      margin-bottom: 20px;
+    .hero p{
+        font-size:18px;
     }
 
-    h1 {
-      font-size: clamp(42px, 7vw, 78px);
-      margin-bottom: 18px;
-      letter-spacing: 2px;
+    .cards,
+    .safari-grid,
+    .wildlife-grid{
+        grid-template-columns:1fr;
     }
 
-    .hero p {
-      font-size: 20px;
-      line-height: 1.6;
-      margin-bottom: 30px;
+    .book h2{
+        font-size:34px;
     }
-
-    .btn {
-      display: inline-block;
-      padding: 15px 30px;
-      border-radius: 30px;
-      background: #d9a441;
-      color: #111;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    section {
-      padding: 70px 7%;
-    }
-
-    .title {
-      text-align: center;
-      font-size: 40px;
-      margin-bottom: 45px;
-    }
-
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 22px;
-    }
-
-    .card {
-      background: #102319;
-      border-radius: 18px;
-      overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0,0,0,.3);
-    }
-
-    .card img {
-      width: 100%;
-      height: 260px;
-      object-fit: cover;
-      display: block;
-    }
-
-    .card h3 {
-      padding: 18px;
-      text-align: center;
-    }
-
-    footer {
-      text-align: center;
-      padding: 30px;
-      background: #030a06;
-      color: #aaa;
-    }
-  </style>
+}
+</style>
 </head>
 
 <body>
 
-  <header>
-    <div class="hero">
-      <img src="logo.png" class="logo" alt="Susanthe Adventure Safari Logo">
+<header>
 
-      <h1>Susanthe Adventure Safari</h1>
+<div class="logo-area">
+<img src="logo.png" alt="Susanthe Adventure Safari">
 
-      <p>
-        Experience the wild beauty of Habarana, Sri Lanka.
-        Discover unforgettable wildlife adventures surrounded by nature.
-      </p>
+<div class="logo-text">
+<h2>SUSANTHA ADVENTOUR</h2>
+<p>JEEP SAFARI • HABARANA</p>
+</div>
+</div>
 
-      <a href="#gallery" class="btn">Explore Safari</a>
-    </div>
-  </header>
+<nav>
+<a href="#home">HOME</a>
+<a href="#about">ABOUT</a>
+<a href="#safaris">SAFARIS</a>
+<a href="#wildlife">WILDLIFE</a>
+<a href="#gallery">GALLERY</a>
+<a href="#book">BOOK NOW</a>
+</nav>
 
-  <section id="gallery">
-    <h2 class="title">Wildlife Gallery</h2>
+</header>
 
-    <div class="gallery">
 
-      <div class="card">
-        <img src="wildlife-1.jpg" alt="Wildlife">
-        <h3>Wildlife Adventure</h3>
-      </div>
+<!-- HERO -->
 
-      <div class="card">
-        <img src="wildlife-2.jpg" alt="Wildlife">
-        <h3>Into the Wild</h3>
-      </div>
+<section class="hero" id="home">
 
-      <div class="card">
-        <img src="wildlife-3.jpg" alt="Wildlife">
-        <h3>Nature Experience</h3>
-      </div>
+<div class="hero-content">
 
-      <div class="card">
-        <img src="wildlife-4.jpg" alt="Wildlife">
-        <h3>Safari Moments</h3>
-      </div>
+<div class="location">
+HABARANA • SRI LANKA
+</div>
 
-      <div class="card">
-        <img src="wildlife-5.jpg" alt="Wildlife">
-        <h3>Discover Sri Lanka</h3>
-      </div>
+<h1>
+Discover the Wild<br>
+Side of Sri Lanka
+</h1>
 
-      <div class="card">
-        <img src="wildlife-6.jpg" alt="Wildlife">
-        <h3>Adventure Awaits</h3>
-      </div>
+<p>
+Experience unforgettable jeep safaris and discover elephants,
+leopards, deer, sloth bears and spectacular birdlife with
+Susanthe Adventour Jeep Safari.
+</p>
 
-    </div>
-  </section>
+<div class="buttons">
 
-  <footer>
-    © 2026 Susanthe Adventure Safari · Habarana, Sri Lanka
-  </footer>
+<a class="btn primary" href="#book">
+BOOK YOUR SAFARI
+</a>
+
+<a class="btn secondary"
+href="https://wa.me/94707763283"
+target="_blank">
+WHATSAPP US
+</a>
+
+</div>
+
+<div class="animals">
+
+<span>🐘 Elephants</span>
+<span>•</span>
+<span>🦁 Leopards</span>
+<span>•</span>
+<span>🦌 Deer</span>
+<span>•</span>
+<span>🐻 Sloth Bears</span>
+<span>•</span>
+<span>🦩 Birdlife</span>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+<h2 class="section-title">
+Your Safari Adventure Starts Here
+</h2>
+
+<p class="section-text">
+Explore the incredible wildlife and natural beauty around
+Habarana with an experienced local safari team.
+We provide memorable jeep safari experiences for families,
+couples and wildlife lovers.
+</p>
+
+<div class="cards">
+
+<div class="card">
+<div class="icon">🚙</div>
+<h3>Jeep Safari</h3>
+<p>
+Comfortable safari jeep experiences through
+Sri Lanka's beautiful wildlife areas.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🐘</div>
+<h3>Wildlife</h3>
+<p>
+Get close to elephants and discover the amazing
+wildlife of Sri Lanka.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">📸</div>
+<h3>Memories</h3>
+<p>
+Capture unforgettable moments surrounded by
+nature and wildlife.
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SAFARIS -->
+
+<section class="safaris" id="safaris">
+
+<h2 class="section-title">
+Our Safari Experiences
+</h2>
+
+<p class="section-text">
+Choose an exciting safari adventure and experience
+the wild side of Habarana.
+</p>
+
+<div class="safari-grid">
+
+<div class="safari">
+<img src="wildlife-1.jpg" alt="Wildlife Safari">
+<div class="safari-content">
+<h3>Wildlife Safari</h3>
+<p>
+Discover elephants, birds and other amazing wildlife
+in their natural environment.
+</p>
+</div>
+</div>
+
+<div class="safari">
+<img src="wildlife-2.jpg" alt="Elephant Safari">
+<div class="safari-content">
+<h3>Elephant Safari</h3>
+<p>
+Experience the beauty of Sri Lanka's magnificent
+elephants.
+</p>
+</div>
+</div>
+
+<div class="safari">
+<img src="wildlife-3.jpg" alt="Nature Safari">
+<div class="safari-content">
+<h3>Nature Adventure</h3>
+<p>
+Enjoy a peaceful adventure through forests,
+lakes and beautiful landscapes.
+</p>
+</div>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- WILDLIFE -->
+
+<section class="wildlife" id="wildlife">
+
+<h2 class="section-title">
+Sri Lanka Wildlife
+</h2>
+
+<p class="section-text">
+A safari is more than a journey. It is a chance to see
+Sri Lanka's incredible wildlife in the wild.
+</p>
+
+<div class="wildlife-grid">
+
+<img src="wildlife-1.jpg" alt="Wildlife">
+<img src="wildlife-2.jpg" alt="Wildlife">
+<img src="wildlife-3.jpg" alt="Wildlife">
+<img src="wildlife-4.jpg" alt="Wildlife">
+<img src="wildlife-5.jpg" alt="Wildlife">
+<img src="wildlife-6.jpg" alt="Wildlife">
+
+</div>
+
+</section>
+
+
+<!-- BOOK -->
+
+<section class="book" id="book">
+
+<h2>
+Ready for Your Safari?
+</h2>
+
+<p>
+Contact us today and plan your unforgettable
+Habarana wildlife adventure.
+</p>
+
+<a class="btn primary"
+href="https://wa.me/94707763283"
+target="_blank">
+WHATSAPP BOOKING
+</a>
+
+</section>
+
+
+<footer id="gallery">
+
+<p>
+© 2026 <strong>Susanthe Adventour Jeep Safari</strong>
+</p>
+
+<p style="margin-top:10px;">
+Habarana • Sri Lanka
+</p>
+
+</footer>
+
+
+<a class="whatsapp"
+href="https://wa.me/94707763283"
+target="_blank">
+💬 WhatsApp Booking
+</a>
 
 </body>
+</html>
